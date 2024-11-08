@@ -7,15 +7,28 @@ void main() {
   runApp(const QuotesApp());
 }
 
-class QuotesApp extends StatelessWidget {
+class QuotesApp extends StatefulWidget {
   const QuotesApp({Key? key}) : super(key: key);
 
+  @override
+  State<QuotesApp> createState() => _QuotesAppState();
+}
+
+class _QuotesAppState extends State<QuotesApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Quotes App',
-      home: QuotesListScreen(
-        quotes: quotes,
+      home: Navigator(
+        pages: [
+          MaterialPage(
+            key: const ValueKey("QuotesListPage"),
+            child: QuotesListScreen(
+              quotes: quotes,
+            ),
+          ),
+        ],
+        onPopPage: (route, result) {},
       ),
     );
   }

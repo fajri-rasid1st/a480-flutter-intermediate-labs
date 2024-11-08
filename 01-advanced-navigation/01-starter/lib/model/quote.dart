@@ -38,8 +38,7 @@ class Quote {
 final quotes = [
   Quote(
     id: "1",
-    quote:
-        "Cleaning code does NOT take time. NOT cleaning code does take time.",
+    quote: "Cleaning code does NOT take time. NOT cleaning code does take time.",
     author: "Robert C. Martin",
   ),
   Quote(
@@ -59,8 +58,7 @@ final quotes = [
   ),
   Quote(
     id: "5",
-    quote:
-        "A program that produces incorrect results twice as fast is infinitely slower.",
+    quote: "A program that produces incorrect results twice as fast is infinitely slower.",
     author: "John Ousterhout",
   ),
 ];
